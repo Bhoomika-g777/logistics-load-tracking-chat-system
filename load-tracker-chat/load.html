@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rigbot Q/A Portal</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,300">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.2/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400&family=Finger+Paint&display=swap">
+    <link rel="stylesheet" href="loadstyle.css">
+</head>
+<body>
+    <div id="login-container">
+      <h2>Enter Confirmation PIN</h2> 
+      <input type="password" placeholder="Enter PIN" id="pin-input">
+      <button id="submit-pin">Proceed</button>
+      <p id="error-msg"></p>
+    </div>
+
+    <div id="chat-container" class="hidden">
+        <div class="chat-header">
+            <h1>Rigbot Q/A Portal</h1>
+        </div>
+        <div class="chat-box" id="chat-box">
+            <p class="bot-message">Welcome to Rigbot Q/A portal</p>
+            <p class="bot-message">How can I assist you? Need to know about assigned loads handled by your carrier!</p>
+
+            <div id="response-options">
+                <button id="yes-btn">Yes</button>
+                <button id="no-btn">No</button>
+            </div>
+
+            <div class="carrier-details hidden" id="carrier-details">
+                <p class="bot-message">Carrier: <strong>XYZ Logistics</strong></p>
+                <button id="show-loads-btn">View Active Loads</button>
+                <ul id="load-list"></ul>
+            </div>
+            
+        </div>
+
+        
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your question...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+   
+    <script src="loadscript.js"></script>
+</body>
+</html>

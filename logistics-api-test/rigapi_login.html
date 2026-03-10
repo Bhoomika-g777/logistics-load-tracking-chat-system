@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Rigbot</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,300">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.2/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400&family=Finger+Paint&display=swap">
+    <link rel="stylesheet" href="chatstyles.css">
+</head>
+<body>
+  <div id="login-container">
+    <h2>Enter Confirmation PIN</h2>
+    <input type="password" id="pin-input" placeholder="Enter PIN" required>
+    <button type="button" id="submit-pin">Proceed</button>
+    <p id="error-msg"></p>
+  </div>
+
+  <script>
+    document.getElementById('submit-pin').addEventListener('click', function () {
+        const pin = document.getElementById('pin-input').value;
+        if (pin === '1234') { 
+            window.location.href = `/chat?pin=${pin}`; 
+        } else {
+            document.getElementById('error-msg').innerText = 'Invalid PIN'; 
+        }
+    });
+  </script>
+</body>
+</html>
